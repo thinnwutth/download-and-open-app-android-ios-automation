@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="selenium-app" parallel="tests" thread-count="2">
+    <test name="iosApp">
+        <parameter name="platformName" value="ios"/>
+        <parameter name="deviceName" value="iPhoneX"/>
+        <parameter name="platformVersion" value="16.6.1"/>
+        <parameter name="portNumber" value="4722"/>
+        <classes>
+            <class name="com.selenium.test.testng.tests.InstallAppFromAppStoreiOs"/>
+        </classes>
+    </test>
+    <test name="androidApp">
+        <parameter name="platformName" value="Android"/>
+        <parameter name="deviceName" value="Pixel7"/>
+        <parameter name="platformVersion" value="12"/>
+        <parameter name="portNumber" value="4723"/>
+        <classes>
+            <class name="com.selenium.test.testng.tests.InstallAppFromPlayStore"/>
+        </classes>
+    </test>
+
+</suite>
+
